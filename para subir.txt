@@ -1,0 +1,12 @@
+para preparar los archivos modificados  = git add index.html
+poner etiqueta a lo guardado = git commit -m "Actualización de datos del estudio"
+subir los archivos = git push origin master
+
+
+
+cuando agrego documentos a la carpeta:
+agregar docuemnto = git add .
+
+git commit -m "Logo agregado y estructura de la tarjeta lista"
+
+git push origin master

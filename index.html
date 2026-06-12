@@ -96,9 +96,17 @@
             font-size: 16px;
             font-weight: 600;
             transition: background-color 0.2s, transform 0.1s;
+            cursor: pointer;
+            border: none;
         }
         .btn:active {
             transform: scale(0.98);
+        }
+        .btn-vcard {
+            background-color: #134e4a; /* Color verde oscuro institucional */
+        }
+        .btn-vcard:hover {
+            background-color: #0b302e;
         }
         .btn-whatsapp {
             background-color: #25d366;
@@ -153,6 +161,10 @@
         </div>
     </div>
 
+    <button onclick="descargarVcard()" class="btn btn-vcard">
+        💾 Agendar como contacto
+    </button>
+
     <a href="https://wa.me/5493755432994" class="btn btn-whatsapp" target="_blank">
         💬 Enviar Mensaje de WhatsApp
     </a>
@@ -169,6 +181,39 @@
         © 2026 Zajarchuk Estudio Contable. Todos los derechos reservados.
     </div>
 </div>
+
+<script>
+function descargarVcard() {
+    // Definimos los datos del contacto en formato VCF standard
+    const vcardData = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "FN:Estudio Contable Zajarchuk",
+        "ORG:Estudio Contable Zajarchuk",
+        "TEL;TYPE=CELL,VOICE;VALUE=uri:tel:+5493755432994",
+        "TEL;TYPE=WORK,VOICE:(3755)422429",
+        "EMAIL;TYPE=PREF,INTERNET:estudiozaj@yahoo.com.ar",
+        "ADR;TYPE=WORK,POSTAL:;;Av. Sarmiento 1201;Oberá;Misiones;3360;Argentina",
+        "URL:https://agus23793-debug.github.io/gestion-clientes/",
+        "END:VCARD"
+    ].join("\r\n");
+
+    // Convertimos el texto a un archivo descargable al vuelo
+    const blob = new Blob([vcardData], { type: "text/vcard;charset=utf-8;" });
+    const link = document.createElement("a");
+    
+    // Configuramos la descarga automática según el navegador
+    if (navigator.msSaveBlob) { 
+        navigator.msSaveBlob(blob, "Estudio_Zajarchuk.vcf");
+    } else {
+        link.href = URL.createObjectURL(blob);
+        link.setAttribute("download", "Estudio_Zajarchuk.vcf");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+}
+</script>
 
 </body>
 </html>
