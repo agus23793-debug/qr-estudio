@@ -52,10 +52,10 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        /* Bloque de Información de solo lectura */
+        /* Bloque de Información */
         .info-box {
             background-color: #f8f9fa;
-            border-left: 5px solid #134e4a; /* Verde oscuro basado en el logo */
+            border-left: 5px solid #134e4a;
             border-radius: 12px;
             padding: 20px;
             text-align: left;
@@ -100,14 +100,20 @@
         .btn:active {
             transform: scale(0.98);
         }
+        .btn-whatsapp {
+            background-color: #25d366;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+        }
         .btn-maps {
-            background-color: #2e7d32; /* Verde intermedio para mapas */
+            background-color: #2e7d32;
         }
         .btn-maps:hover {
             background-color: #1b5e20;
         }
         .btn-descargas {
-            background-color: #111827; /* Negro/Gris oscuro institucional */
+            background-color: #111827;
         }
         .btn-descargas:hover {
             background-color: #1f2937;
@@ -126,29 +132,34 @@
         <img src="logo.bmp" alt="Zajarchuk Estudio Contable" class="logo-img">
     </div>
     
-    
     <p class="subtitle">Estudio Contable Zajarchuk</p>
 
     <div class="info-box">
         <div class="info-item">
             <div class="info-label">Whatsapp</div>
-            <div class="info-value">+54 9 3755 43-2994</div> </div>
+            <div class="info-value">+54 9 3755 43-2994</div> 
+        </div>
         <div class="info-item">
             <div class="info-label">Telefono</div>
-            <div class="info-value">(3755) 422429/424268</div> </div>
+            <div class="info-value">(3755) 422429/424268</div> 
+        </div>
         <div class="info-item">
             <div class="info-label">Correo Electrónico</div>
-            <div class="info-value">estudiozaj@yahoo.com.ar</div> </div>
+            <div class="info-value">estudiozaj@yahoo.com.ar</div> 
+        </div>
         <div class="info-item">
             <div class="info-label">Dirección</div>
-            <div class="info-value">Av. Sarmiento 1201, Obera. Misiones, C.P. 3360</div> </div>
+            <div class="info-value">Av. Sarmiento 1201, Obera. Misiones, C.P. 3360</div> 
+        </div>
     </div>
 
-    <!-- BOTONES DE ACCIÓN (INTERACTIVOS) -->
-    <!-- Reemplaza el texto de ?q= por tu dirección para Google Maps -->
+    <a href="https://wa.me/5493755432994" class="btn btn-whatsapp" target="_blank">
+        💬 Enviar Mensaje de WhatsApp
+    </a>
+
     <a href="https://maps.google.com/?q=Av. Sarmiento 1201, N3360 Oberá, Misiones" class="btn btn-maps" target="_blank">
-    📍 Ubicación en Google Maps
-   </a>
+        📍 Ubicación en Google Maps
+    </a>
 
     <a href="https://spowerinfo.com.ar/estudio2.apk" class="btn btn-descargas" target="_blank">
         📂 App del Estudio
